@@ -6,11 +6,11 @@ require 'ancestry_uniqueness/version'
 Gem::Specification.new do |spec|
   spec.name          = "ancestry_uniqueness"
   spec.version       = Ancestry::Uniqueness::VERSION
-  spec.authors       = ["Flauwekeul"]
-  spec.email         = ["flauwekeul@gmail.com"]
+  spec.authors       = ["Abbe Keultjes"]
+  spec.email         = ["abbe.keultjes@gmail.com"]
   spec.description   = %q{Uniqueness validator when using the ancestry gem.}
-  spec.summary       = %q{Provides a uniqueness validator for objects that are ordered in a tree using the ancestry gem.}
-  spec.homepage      = ""
+  spec.summary       = %q{Provides an activerecord uniqueness validator for objects that are ordered in a tree using the ancestry gem.}
+  spec.homepage      = "https://github.com/flauwekeul/ancestry_uniqueness"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
@@ -24,6 +24,6 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rspec"
   spec.add_development_dependency "sqlite3"
 
-  spec.add_dependency "ancestry", "~> 2.0"
-  spec.add_dependency "activerecord", "~> 4.0"
+  spec.add_dependency "ancestry"
+  spec.add_dependency "activerecord"
 end
