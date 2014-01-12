@@ -1,6 +1,6 @@
 require "spec_helper"
 
-describe Ancestry::Uniqueness::Validator do
+describe AncestryUniquenessValidator do
   
   # set default value if undefined
   let(:scope_attr) { defined?(super) ? super() : nil }
@@ -43,7 +43,7 @@ describe Ancestry::Uniqueness::Validator do
   context "without scope" do
     class Validatable < ActiveRecord::Base
       has_ancestry
-      validates_with Ancestry::Uniqueness::Validator, attributes: :provider
+      validates_with AncestryUniquenessValidator, attributes: :provider
     end
 
     let(:a_record) { Validatable.create!(provider: 'provider', parent: nil) }
@@ -72,7 +72,7 @@ describe Ancestry::Uniqueness::Validator do
   context "with scope" do
     class Validatable < ActiveRecord::Base
       has_ancestry
-      validates_with Ancestry::Uniqueness::Validator, attributes: :provider, scope: :scope_attr
+      validates_with AncestryUniquenessValidator, attributes: :provider, scope: :scope_attr
     end
 
     let(:a_record) { Validatable.create!(provider: 'provider', parent: nil, scope_attr: 'some scope') }

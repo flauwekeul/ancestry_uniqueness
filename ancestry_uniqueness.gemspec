@@ -1,10 +1,10 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'ancestry/uniqueness/version'
+require 'ancestry_uniqueness/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "ancestry-uniqueness"
+  spec.name          = "ancestry_uniqueness"
   spec.version       = Ancestry::Uniqueness::VERSION
   spec.authors       = ["Flauwekeul"]
   spec.email         = ["flauwekeul@gmail.com"]
