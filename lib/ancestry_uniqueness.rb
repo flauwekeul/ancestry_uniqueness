@@ -1,6 +1,6 @@
 require "ancestry_uniqueness/version"
 
-class AncestryUniquenessValidator < ActiveRecord::Validations::UniquenessValidator
+class AncestryUniquenessValidator < ActiveModel::EachValidator
 
   def validate_each(record, attribute, value)
     exclude_self = record.try(:id) ? ['id <> ?', record.id] : []
