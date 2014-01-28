@@ -1,3 +1,5 @@
+[![Gem Version](https://badge.fury.io/rb/ancestry_uniqueness.png)](http://badge.fury.io/rb/ancestry_uniqueness)
+
 # Ancestry uniqueness
 
 Provides an activerecord uniqueness validator for objects that are ordered in a tree using the [ancestry](https://github.com/stefankroes/ancestry) gem.
